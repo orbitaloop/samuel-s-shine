@@ -21,23 +21,28 @@ const Index = () => {
                 <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground font-serif">Hi, I'm Samuel</h1>
               </div>
 
-              <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  I founded{" "}
-                  <a href="https://mosalingua.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline underline-offset-4 decoration-primary/30 hover:decoration-primary transition-colors inline-flex items-center gap-1">
-                    MosaLingua
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                  , an EdTech company I bootstrapped from zero to{" "}
-                  <span className="text-foreground font-semibold">
-                    11 million app downloads
-                  </span>{" "}
-                  and a dozen online courses.
-                </p>
-                <p>
-                  Now, I'm channeling my passion into new ventures that create
-                  meaningful impact.
-                </p>
+              <div className="flex gap-6 items-start">
+                <div className="space-y-5 text-lg text-muted-foreground leading-relaxed flex-1">
+                  <p>
+                    I founded{" "}
+                    <a href="https://mosalingua.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline underline-offset-4 decoration-primary/30 hover:decoration-primary transition-colors inline-flex items-center gap-1">
+                      MosaLingua
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                    , an EdTech company I bootstrapped from zero to{" "}
+                    <span className="text-foreground font-semibold">
+                      11 million app downloads
+                    </span>{" "}
+                    and a dozen online courses.
+                  </p>
+                  <p>
+                    Now, I'm channeling my passion into new ventures that create
+                    meaningful impact.
+                  </p>
+                </div>
+                <div className="hidden sm:block flex-shrink-0">
+                  <img src={sailingImage} alt="Samuel sailing - embracing adventure and exploration" className="w-32 lg:w-40 h-auto rounded-xl shadow-lg ring-1 ring-border" />
+                </div>
               </div>
 
               {/* Current Projects */}
@@ -77,25 +82,13 @@ const Index = () => {
       {/* Interests Section */}
       <section className="py-12 lg:py-16 border-t border-border/50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
-            <div className="lg:col-span-2">
-              <h2 className="text-sm font-medium text-secondary uppercase tracking-wide mb-4">
-                Areas of Interest
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {interests.map(interest => <Badge key={interest} variant="secondary" className="px-3 py-1.5 text-sm font-normal bg-accent text-accent-foreground hover:bg-accent/80 transition-colors">
-                    {interest}
-                  </Badge>)}
-              </div>
-            </div>
-
-            {/* Sailing Image */}
-            <div className="flex lg:justify-end">
-              <div className="relative group">
-                <div className="absolute -inset-2 bg-gradient-to-br from-primary/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                <img src={sailingImage} alt="Samuel sailing - embracing adventure and exploration" className="relative w-44 lg:w-56 h-auto rounded-xl shadow-lg ring-1 ring-border" />
-              </div>
-            </div>
+          <h2 className="text-sm font-medium text-secondary uppercase tracking-wide mb-4">
+            Areas of Interest
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {interests.map(interest => <Badge key={interest} variant="secondary" className="px-3 py-1.5 text-sm font-normal bg-accent text-accent-foreground hover:bg-accent/80 transition-colors">
+                {interest}
+              </Badge>)}
           </div>
         </div>
       </section>
