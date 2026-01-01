@@ -1,7 +1,7 @@
 import samuelAvatar from "@/assets/samuel-avatar.jpeg";
 import sailingImage from "@/assets/sailing.png";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Linkedin } from "lucide-react";
 const Index = () => {
   const interests = ["Entrepreneurship", "Health & Wellness", "Mental Health", "Ecology", "Education", "Personal Development", "AI", "Community Building"];
   return <main className="min-h-screen bg-background">
@@ -64,6 +64,10 @@ const Index = () => {
                     <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
                   </a>
                 </div>
+                <a href="https://www.linkedin.com/in/smichelot/" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 mt-4 text-primary hover:text-primary/80 transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                  <span className="font-medium">Contact me</span>
+                </a>
               </div>
             </div>
 
